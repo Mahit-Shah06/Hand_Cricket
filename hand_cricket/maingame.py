@@ -19,7 +19,7 @@ def load_data(file_path: str):
         file_path (str): The path to the CSV file.
     """
 
-    global users 
+    global users
 
     # Check if the CSV file exists, if not, create it
     if not os.path.exists(file_path):
@@ -146,8 +146,8 @@ current_inning = 1
 root = tk.Tk()
 root.title("Login/Register")
 
-root.minsize(350, 175)
-root.maxsize(350, 175)
+# root.minsize(350, 175)
+# root.maxsize(350, 175)
 
 frame = tk.Frame(root, padx=20, pady=20)
 frame.pack(padx=10, pady=10)
@@ -434,7 +434,7 @@ def start_game():
 
     for i in range(1, 11):
         Computer_sprites[i] = pygame.sprite.Group()
-        Computer[i] = AnimateP(-10, -0, i)
+        Computer[i] = AnimateC(-10, -0, i)
         Computer_sprites[i].add(Computer[i])
 
     back_surface = pygame.Surface((1280, 720))
